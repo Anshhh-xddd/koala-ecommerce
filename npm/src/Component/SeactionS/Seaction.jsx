@@ -153,7 +153,7 @@ const Seaction = () => {
         <div className="relative w-full bg-gray-200 py-8 mt-4 overflow-hidden" {...handlers}>
             {/* Aligned See All Button with Save on Bestsellers text */}
             <div className="flex items-center justify-between px-6 mb-6">
-                <h2 className="text-left text-4xl font-extrabold font-serif">Australia's most awarded mattress brand</h2>
+                <h2 className="text-left text-4xl font-extrabold font-serif">Bestsellers</h2>
                 <button className="px-4 py-2 font-semibold text-black rounded-full hover:text-gray-400 underline">
                     See All
                 </button>

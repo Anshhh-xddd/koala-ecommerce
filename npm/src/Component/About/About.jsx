@@ -115,7 +115,7 @@ const About = () => {
                         />
                         <button
                             type="submit"
-                            className="mt-2 w-full px-6 py-2 bg-[#DE9060] text-white rounded-lg hover:bg-green-600 hover:bg-[#FAD389] hover:text-black"
+                            className="mt-2 w-full px-6 py-2 bg-[#DE9060] text-white rounded-lg hover:bg-[#FAD389] hover:text-black"
                         >
                             Subscribe
                         </button>

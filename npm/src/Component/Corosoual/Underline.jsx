@@ -8,12 +8,12 @@ import { SiAdguard } from "react-icons/si";
 const Underline = () => {
     return (
         <div className='flex flex-row justify-center relative bg-[#FFFFFF] h-auto md:h-[50px]'>
-            <div className='flex items-center gap-2 text-[12px] font-thin'> <div className='py-1'><CiDeliveryTruck /></div> Fast Delivery</div>
-            <div className='flex items-center gap-2 text-[12px] font-thin'> 
+            <div className='flex items-center gap-2 text-[11px] font-bold'> <div className='py-1'><CiDeliveryTruck /></div> Fast Delivery</div>
+            <div className='flex items-center gap-2 text-[11px] font-bold'> 
                 <div className='py-1'></div>
-                <div className='py-1'><SlCalender /></div> World-class warranty
+                <div className='py-1'><SlCalender /></div > World-class warranty
             </div>
-            <div className='flex items-center gap-2 text-[12px] font-thin'> 
+            <div className='flex items-center gap-2 text-[11px] font-bold'> 
                 <div className='py-1'></div>
                 <div className='py-1'><SiAdguard /> </div> 120-night free trial
             </div>

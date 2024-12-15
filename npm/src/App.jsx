@@ -13,6 +13,14 @@ import About from './Component/About/About'
 import Footer from './Component/Footer/Footer'
 
 
+
+// external
+
+
+// BrowserRouter is a top-level component that acts as a single source of truth for the
+
+
+// This is the App component that will render all other components.
 const App = () => {
   return (
     <>

@@ -4,6 +4,7 @@ import { MdPerson } from "react-icons/md";
 import { FaCartShopping } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const Dropdown = ({ title, items, isOpen, toggleDropdown, onMouseEnter, onMouseLeave, underlineActive }) => {
   const dropdownRef = useRef(null);
@@ -90,6 +91,7 @@ const Dropdown = ({ title, items, isOpen, toggleDropdown, onMouseEnter, onMouseL
 const Navbar = () => {
   const [searchActive, setSearchActive] = useState(false); // State to toggle search visibility
   const [query, setQuery] = useState(""); // State for search input
+  const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
 
   // State for multiple dropdowns
   const [dropdowns, setDropdowns] = useState({
@@ -161,14 +163,10 @@ const Navbar = () => {
   };
 
 
-  // const handleLogoClick = () => {
-  //   // Implement the action when the logo is clicked (e.g., redirect to homepage)
-  //   alert("Logo clicked!");
-  // };
-
-  // const handleProfileClick = () => {
-  //   navigate("/signup"); // Navigate to the profile page (you can change "/profile" to any route)
-  // };
+  const handleLogoClick = () => {
+    // Implement the action when the logo is clicked (e.g., redirect to homepage)
+    alert("Logo clicked!");
+  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -354,12 +352,45 @@ const Navbar = () => {
               className="text-gray-800 text-xl cursor-pointer"
               onClick={() => setSearchActive(true)}
             />
-              <span
-              className="cursor-pointer hover:text-gray-600"
-              // onClick={handleProfileClick}
-            >
-              <MdPerson className="text-xl" />
-            </span>
+
+
+            {/* login buttomn  */}
+            <span className="cursor-pointer flex items-center space-x-2 hover:text-gray-600 sm:space-x-1 sm:block">
+  {isAuthenticated && (
+    <p className="text-[13px] font-bold hidden sm:inline">{user.name}</p>
+  )}
+  {isAuthenticated ? (
+    <button
+      className="text-[14px] font-extrabold flex items-center"
+      onClick={() =>
+        logout({ logoutParams: { returnTo: window.location.origin } })
+      }
+    >
+      {/* User Avatar or Default Icon */}
+      {user?.picture ? (
+        <img
+          src={user.picture}
+          alt={user.name}
+          className="w-6 h-6 rounded-full border border-gray-300 sm:hidden"
+        />
+      ) : (
+        <MdPerson className="text-lg sm:hidden" />
+      )}
+      <span className="hidden ml-8 sm:block">Log Out</span>
+    </button>
+  ) : (
+    <button
+      className="text-[14px] font-extrabold flex items-center"
+      onClick={() => loginWithRedirect()}
+    >
+      <MdPerson className="text-lg" />
+      <span className="hidden sm:block">Log In</span>
+    </button>
+  )}
+</span>
+
+
+            {/* cart-button */}
             <span className="cursor-pointer hover:text-gray-600">
               <FaCartShopping />
             </span>

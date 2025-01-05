@@ -25,6 +25,7 @@ export default {
       colors: {
         primary: "#3498db", // Custom blue color
         secondary: "#f1c40f", // Custom yellow color
+        tertiary: "#f1c40f", // Custom cyan color
       },
       spacing: {
         128: "32rem", // Adds larger spacing utilities

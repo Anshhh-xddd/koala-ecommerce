@@ -5,6 +5,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import { IoIosArrowDown } from "react-icons/io";
 import { RxHamburgerMenu, RxCross2 } from "react-icons/rx";
 import { useAuth0 } from "@auth0/auth0-react";
+import Abcd from "../../assets/logos/one.webp"
 
 const Dropdown = ({ title, items, isOpen, toggleDropdown, onMouseEnter, onMouseLeave, underlineActive }) => {
   const dropdownRef = useRef(null);
@@ -181,7 +182,7 @@ const Navbar = () => {
 
   const dropdownItems = {
     sofas: [
-      { name: "Sofas", image: "src/assets/Image/nav/ModernSofa_ArvoStorm_3Seater_4_1.webp" },
+      { name: "Sofas", image: Abcd },
       { name: "Sofa Beds", image: "src/assets/Image/nav/CushyLuxe_Gumleaf_Queen_8_2.webp" },
       { name: "Modular Sofas", image: "src/assets/Image/nav/e6077df4957a1c776616766922096db6.webp" },
       { name: "Chaise Sofas", image: "src/assets/Image/nav/ModernSofa_ArvoStorm_3Seater_4_1.webp" },

@@ -7,7 +7,7 @@ const SectionOne = () => {
       image: 'https://au.koala.com/cdn/shop/collections/Queen_Plus_Mattress_11_1.webp?v=1727055087&width=3000',
       title: 'Mattresses',
       discount: 'Up to 30% off',
-      link: '/mattresses',
+      link: '/mattres',
     },
     {
       image: 'https://au.koala.com/cdn/shop/collections/CushyLuxe_Gumleaf_Queen_8_2.webp?v=1727055315&width=3000',

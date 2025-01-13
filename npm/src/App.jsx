@@ -1,45 +1,91 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Import routing components
-import Header from './Component/Header/Header';
-import Navbar from './Component/Navbar/Navbar';
-import Carousel from './Component/Corosoual/Carousel';
-import Underline from './Component/Corosoual/Underline';
-import SectionOne from './Component/SeactionS/SeactionOne';
-import Seaction from './Component/SeactionS/Seaction';
-import SectionTwo from './Component/SeactionS/SeactionTwo';
-import Slider from './Component/SeactionS/Slider';
-import SeactionThree from './Component/SeactionS/SeactionThree';
-import Review from './Component/Review/Review';
-import About from './Component/About/About';
-import Footer from './Component/Footer/Footer';
-
-// Components for Routes
-import Inner from './Component/ExternalComp/Inner'; // Ensure this is imported correctly
-import AddToCart from './Component/ExternalComp/AddToCart'
-import Card from './Component/ExternalComp/Card'
-import Aboutinn from './Component/ExternalComp/Aboutinn'
-import Aibutton from './Component/ExternalComp/Aibutton'
+// eslint-disable-next-line no-unused-vars
+import React, { useState } from 'react'; // Import useState here
+import { Routes, Route } from 'react-router-dom'; // Import routing components
+import Homepage from './Pages/Homepage';
+import Aboutpage from './Pages/Aboutpage';
+import Mattrespage from './Pages/Mattrespage';
+import Sofapage from './Pages/Sofapage';
+import Aboutinn from './Pages/Aboutinn';
+import ShopSale from './Pages/ShopSale';
+import SofaBeds from './Pages/SofaBeds';
+import CategoryPage from './Pages/CategoryPage';
+import Clearance from './Pages/Clearance';
+import Login from './Pages/Login';
+import Cart from './Pages/Cart';
 
 const App = () => {
+  // Simulate user login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const categories = [
+    {
+      title: "Sofas",
+      subcategories: [
+        "Leather Sofas", "Fabric Sofas", "Recliners", "Sectionals",
+        "Sofa Beds", "Loveseats"
+      ],
+    },
+    {
+      title: "Bedrooms",
+      subcategories: [
+        "Beds", "Wardrobes", "Dressers", "Nightstands",
+        "Headboards", "Chests"
+      ],
+    },
+    {
+      title: "Living Room",
+      subcategories: [
+        "Coffee Tables", "TV Stands", "Accent Chairs", "Console Tables",
+        "Bookcases", "Ottomans"
+      ],
+    },
+    {
+      title: "Outdoor",
+      subcategories: [
+        "Outdoor Sofas", "Dining Sets", "Loungers", "Fire Pits",
+        "Umbrellas", "Grills"
+      ],
+    },
+  ];
+
   return (
     <>
-      <Header />
-      <Navbar />
-      <Carousel />
-      <Underline />
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/About" element={<Aboutpage />} />
+        <Route path="/Sofa" element={<Sofapage />} />
+        <Route path="/Mattres" element={<Mattrespage />} />
+        <Route path="/sofa-beds" element={<Mattrespage />} />
+        <Route path="/bed-bases" element={<Mattrespage />} />
+        <Route path="/sofas" element={<Mattrespage />} />
+        <Route path="/about" element={<Aboutinn />} />
+        <Route path="/Aboutinn" element={<Aboutinn />} />
+        <Route path="/shop-sale" element={<ShopSale />} />
+        <Route path="/sofa-beds" element={<SofaBeds />} />
+        <Route path="/clearance" element={<Clearance />} />
+        <Route path="/cart" element={<Cart />} />
 
-      {/* Routes Section */}
-      <SectionOne />
-      {/* Other Components */}
-      <Seaction />
-      <Slider />
-      <SectionTwo />
-      <SeactionThree />
-      <Review />
-      <About />
-      <Footer />
+        {/* Personalized route */}
+        {isLoggedIn ? (
+          <Route path="/profile" element={<Profile />} />
+        ) : (
+          <Route path="/profile" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+        )}
+
+        {/* Dynamic Category and Subcategory routes */}
+        {categories.map((category) =>
+          category.subcategories.map((subcategory) => (
+            <Route
+              key={`${category.title}-${subcategory}`}
+              path={`/${category.title.toLowerCase().replace(" ", "-")}/${subcategory
+                .toLowerCase()
+                .replace(" ", "-")}`}
+              element={<CategoryPage category={category.title} subcategory={subcategory} />}
+            />
+          ))
+        )}
+      </Routes>
     </>
-
   );
 };
 

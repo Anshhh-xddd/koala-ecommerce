@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const cards = [
     {
@@ -56,12 +57,13 @@ const About = () => {
                     We’re in the business of making things good
                 </h2>
                 <div className="flex justify-center">
-                    <button className="mt-4 w-full md:w-auto px-6 py-2 text-black rounded-lg border border-black hover:underline">
+
+                    <Link to='/Aboutinn' className="mt-4 w-full md:w-auto px-6 py-2 text-black rounded-lg border border-black hover:underline">
                         Learn More
-                    </button>
+                    </Link>
                 </div>
             </div>
-            
+
             {/* Cards Section */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {cards.map((card, index) => (

@@ -1,4 +1,6 @@
+// eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
     const [isAboutOpen, setIsAboutOpen] = useState(false); // Desktop About dropdown
@@ -49,12 +51,12 @@ const Header = () => {
                             <ul className="py-2 text-sm text-black">
                                 {["Why Koala", "Koala Second Home", "Sydney Showroom"].map((item, index) => (
                                     <li key={index}>
-                                        <a
-                                            href="#"
+                                        <Link
+                                           to='/About'
                                             className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-[#DE9060] dark:hover:text-white"
                                         >
                                             {item}
-                                        </a>
+                                        </Link>
                                     </li>
                                 ))}
                             </ul>

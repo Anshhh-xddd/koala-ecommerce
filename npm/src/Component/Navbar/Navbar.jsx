@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch, FaUser, FaCartPlus, FaBars, FaTimes } from "react-icons/fa";
-import Abcd from '../../assets/secition/one/one.png'
+import efg from '../../assets/0d825b7a3fd8d7d034b9c18e0017c853_d96e9933-6357-4d58-961f-1a636633497d (1).png'
+
 
 
 const Navbar = () => {
@@ -42,7 +43,7 @@ const Navbar = () => {
     {
       title: "Bedrooms",
       subcategories: [
-        { name: "Beds", imgSrc: "/images/bed.jpg" },
+        { name: "Leather Sofas", imgSrc: (efg) },
         { name: "Wardrobes", imgSrc: "/images/wardrobe.jpg" },
         { name: "Dressers", imgSrc: "/images/dresser.jpg" },
       ],

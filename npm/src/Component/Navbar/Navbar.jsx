@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch, FaUser, FaCartPlus, FaBars, FaTimes } from "react-icons/fa";
-import abcd from "../../assets/vite.svg"
+import Abcd from '../../assets/secition/one/one.png'
+
+
 const Navbar = () => {
   const [dropdowns, setDropdowns] = useState([false, false, false, false]);
   const [isSearchActive, setIsSearchActive] = useState(false);

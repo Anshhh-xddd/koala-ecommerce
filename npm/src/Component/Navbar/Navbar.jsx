@@ -1,10 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FaSearch, FaUser, FaCartPlus, FaBars, FaTimes } from "react-icons/fa";
-import efg from '../../assets/0d825b7a3fd8d7d034b9c18e0017c853_d96e9933-6357-4d58-961f-1a636633497d (1).png'
-
-
-
+import abcd from "../../assets/vite.svg"
 const Navbar = () => {
   const [dropdowns, setDropdowns] = useState([false, false, false, false]);
   const [isSearchActive, setIsSearchActive] = useState(false);
@@ -43,7 +40,7 @@ const Navbar = () => {
     {
       title: "Bedrooms",
       subcategories: [
-        { name: "Leather Sofas", imgSrc: (efg) },
+        { name: "Beds", imgSrc: "/images/bed.jpg" },
         { name: "Wardrobes", imgSrc: "/images/wardrobe.jpg" },
         { name: "Dressers", imgSrc: "/images/dresser.jpg" },
       ],
@@ -70,7 +67,7 @@ const Navbar = () => {
     <nav className="bg-gray-100 shadow-md">
       <div className="container mx-auto flex items-center justify-between py-4 px-4 pl-0 pr-0 mr-5">
         {/* Logo */}
-        <Link to="/" className="text-2xl   font-bold text-gray-800">
+        <Link to="" className="text-2xl   font-bold text-gray-800">
       Koala
         </Link>
 
@@ -109,13 +106,13 @@ const Navbar = () => {
         >
           {/* Main Links */}
           <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6">
-            <Link to="/Mattres" className="text-yellow-600 font-semibold">
+            <Link to="/mattress" className="text-yellow-600 font-semibold">
               Shop Sale
             </Link>
-            <Link to="/Mattres" className="hover:text-gray-600">
+            <Link to="/mattress" className="hover:text-gray-600">
               Mattresses
             </Link>
-            <Link to="/Mattres" className="hover:text-gray-600">
+            <Link to="/mattress" className="hover:text-gray-600">
               Sofa Beds
             </Link>
 

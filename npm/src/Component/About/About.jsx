@@ -58,7 +58,7 @@ const About = () => {
                 </h2>
                 <div className="flex justify-center">
 
-                    <Link to='/Aboutinn' className="mt-4 w-full md:w-auto px-6 py-2 text-black rounded-lg border border-black hover:underline">
+                    <Link to='/About' className="mt-4 w-full md:w-auto px-6 py-2 text-black rounded-lg border border-black hover:underline">
                         Learn More
                     </Link>
                 </div>

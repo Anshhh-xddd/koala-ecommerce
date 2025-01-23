@@ -83,7 +83,7 @@ export default function CategoryPage() {
       tags: ["Best Seller"],
       image: "https://au.koala.com/cdn/shop/files/5a23bc9b5ceef7edd5636a60074a5876.png?v=1725501911&width=720",
     },
-   
+
     // Add more products as needed...
   ];
 
@@ -135,7 +135,7 @@ export default function CategoryPage() {
             (category, index) => (
               <img
                 key={index}
-                src={`https://via.placeholder.com/150x100?text=${category}`}
+                src={`https://au.koala.com/cdn/shop/files/57611daf43fae84d202b01d0b80a74d9.png?v=1725499918&width=720${category}`}
                 alt={category}
                 className="rounded-lg shadow-md hover:shadow-lg"
               />
@@ -167,11 +167,10 @@ export default function CategoryPage() {
               {colors.map((color) => (
                 <button
                   key={color}
-                  className={`px-2 py-1 rounded text-sm transition ${
-                    selectedColor.includes(color)
+                  className={`px-2 py-1 rounded text-sm transition ${selectedColor.includes(color)
                       ? "bg-gray-800 text-white"
                       : "bg-gray-200 text-gray-800"
-                  }`}
+                    }`}
                   onClick={() => toggleFilter(color, setSelectedColor, color)}
                 >
                   {color}
@@ -187,11 +186,10 @@ export default function CategoryPage() {
               {tags.map((tag) => (
                 <button
                   key={tag}
-                  className={`px-2 py-1 rounded text-sm transition ${
-                    selectedTag.includes(tag)
+                  className={`px-2 py-1 rounded text-sm transition ${selectedTag.includes(tag)
                       ? "bg-gray-800 text-white"
                       : "bg-gray-200 text-gray-800"
-                  }`}
+                    }`}
                   onClick={() => toggleFilter(tag, setSelectedTag, tag)}
                 >
                   {tag}
@@ -279,11 +277,10 @@ export default function CategoryPage() {
             {[...Array(totalPages)].map((_, index) => (
               <button
                 key={index}
-                className={`px-3 py-1 mx-1 border rounded ${
-                  currentPage === index + 1
+                className={`px-3 py-1 mx-1 border rounded ${currentPage === index + 1
                     ? "bg-gray-800 text-white"
                     : "bg-gray-200 text-gray-800"
-                }`}
+                  }`}
                 onClick={() => setCurrentPage(index + 1)}
               >
                 {index + 1}

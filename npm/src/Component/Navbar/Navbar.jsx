@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import { FaSearch, FaUser, FaCartPlus, FaBars, FaTimes } from "react-icons/fa";
+import { useAuth0 } from "@auth0/auth0-react";
+
+
 
 const Navbar = () => {
   const [dropdowns, setDropdowns] = useState([false, false, false, false]);
@@ -62,6 +64,8 @@ const Navbar = () => {
       setDropdowns([false, false, false, false]);
     }
   };
+
+  const { loginWithRedirect } = useAuth0();
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
@@ -210,9 +214,12 @@ const Navbar = () => {
                 />
               )}
             </div>
-            <button className="text-gray-600">
+            <li>
+            <button onClick={() => loginWithRedirect()}>
               <FaUser />
-            </button>
+              </button>;
+            </li>
+            
             <Link to="/cart" className="text-gray-600">
               <FaCartPlus />
             </Link>

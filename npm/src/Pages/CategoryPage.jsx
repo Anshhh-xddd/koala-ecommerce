@@ -17,7 +17,7 @@ export default function CategoryPage() {
       price: 1800,
       color: ["green", "brown"],
       tags: ["Best Seller"],
-      image: "",
+      image: "https://au.koala.com/cdn/shop/files/cb6557e64aa9e0b4caa665ec11c26cb4.png?v=1725498735&width=720",
     },
     {
       id: 2,
@@ -25,7 +25,7 @@ export default function CategoryPage() {
       price: 1390,
       color: ["green", "grey"],
       tags: ["Award-winning"],
-      image: "https://tinyurl.com/mr39nyhe",
+      image: "https://au.koala.com/cdn/shop/files/c7f38088da30da2fde601b5913f53cce.png?v=1734316893&width=720",
     },
     {
       id: 3,
@@ -33,8 +33,57 @@ export default function CategoryPage() {
       price: 2300,
       color: ["brown", "grey"],
       tags: ["New"],
-      image: "https://via.placeholder.com/300/915C47",
+      image: "https://au.koala.com/cdn/shop/files/e96c516af8cb8e772aeee17d9fccff25.png?v=1725500694&width=720",
     },
+    {
+      id: 4,
+      name: "Byron Sofa Bed",
+      price: 1800,
+      color: ["green", "brown"],
+      tags: ["Best Seller"],
+      image: "https://au.koala.com/cdn/shop/files/f7b0bca6b4726077551cd3a66c436067.png?v=1725499355&width=720",
+    },
+    {
+      id: 5,
+      name: "Lounging Sofa",
+      price: 1800,
+      color: ["green", "brown"],
+      tags: ["Best Seller"],
+      image: "https://au.koala.com/cdn/shop/files/4a15c9c51e398bfb1f062da0f8283fc6.png?v=1725500454&width=720",
+    },
+    {
+      id: 6,
+      name: "Sofa Bed",
+      price: 1800,
+      color: ["green", "brown"],
+      tags: ["Best Seller"],
+      image: "https://au.koala.com/cdn/shop/files/SOFABED_LUNAGREY_QUEEN_1-1nC2S7TPwHGQEoKqquoMvr.jpg?v=1725434665&width=1660",
+    },
+    {
+      id: 7,
+      name: "Suffolk Sofa",
+      price: 1800,
+      color: ["green", "brown"],
+      tags: ["Best Seller"],
+      image: "https://au.koala.com/cdn/shop/files/Suffolk_Sofa_3.5_Chaise_CoastalMoss_1-5NbXRQHdtyMQ78xJESySeL.jpg?v=1725431093&width=1660",
+    },
+    {
+      id: 8,
+      name: "Stunner Sofa Bed",
+      price: 1800,
+      color: ["green", "brown"],
+      tags: ["Best Seller"],
+      image: "https://au.koala.com/cdn/shop/files/1bee7b06cc29f25765d7154f77aba1f5.png?v=1725501153&width=720",
+    },
+    {
+      id: 9,
+      name: "Wanda Sofa Bed",
+      price: 1800,
+      color: ["green", "brown"],
+      tags: ["Best Seller"],
+      image: "https://au.koala.com/cdn/shop/files/5a23bc9b5ceef7edd5636a60074a5876.png?v=1725501911&width=720",
+    },
+   
     // Add more products as needed...
   ];
 

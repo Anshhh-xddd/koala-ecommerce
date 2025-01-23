@@ -3,14 +3,14 @@ import { Link } from "react-router-dom";
 import { FaSearch, FaUser, FaCartPlus, FaBars, FaTimes } from "react-icons/fa";
 import { useAuth0 } from "@auth0/auth0-react";
 
-
-
 const Navbar = () => {
   const [dropdowns, setDropdowns] = useState([false, false, false, false]);
   const [isSearchActive, setIsSearchActive] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRefs = useRef([]);
+  
+  const { loginWithRedirect, logout, user, isAuthenticated } = useAuth0();
 
   const categories = [
     {
@@ -49,6 +49,8 @@ const Navbar = () => {
         { name: "Outdoor Coffee Tables", imgSrc: "https://au.koala.com/cdn/shop/files/3fe2d629835e65c8e142b4131861db11.png?v=1725501616&width=500" },
       ],
     },
+  
+    // Other categories omitted for brevity
   ];
 
   const toggleDropdown = (index) => {
@@ -57,15 +59,11 @@ const Navbar = () => {
     );
   };
 
-  
-
   const handleOutsideClick = (event) => {
     if (!dropdownRefs.current.some((ref) => ref && ref.contains(event.target))) {
       setDropdowns([false, false, false, false]);
     }
   };
-
-  const { loginWithRedirect } = useAuth0();
 
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
@@ -106,9 +104,23 @@ const Navbar = () => {
             <Link to="/cart" aria-label="Cart">
               <FaCartPlus className="text-gray-800 text-xl cursor-pointer" />
             </Link>
-            <button className="text-gray-800 text-xl focus:outline-none">
-              <FaUser />
-            </button>
+            {isAuthenticated ? (
+              <img
+                src={user.picture}
+                alt={user.name}
+                className="w-8 h-8 rounded-full cursor-pointer"
+                onClick={() => logout({ returnTo: window.location.origin })}
+                title="Logout"
+              />
+            ) : (
+              <button
+                onClick={() => loginWithRedirect()}
+                className="text-gray-800 text-xl focus:outline-none"
+                aria-label="Login"
+              >
+                <FaUser />
+              </button>
+            )}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-800 text-xl focus:outline-none"
@@ -214,12 +226,19 @@ const Navbar = () => {
                 />
               )}
             </div>
-            <li>
-            <button onClick={() => loginWithRedirect()}>
-              <FaUser />
-              </button>;
-            </li>
-            
+            {isAuthenticated ? (
+              <img
+                src={user.picture}
+                alt={user.name}
+                className="w-8 h-8 rounded-full cursor-pointer"
+                onClick={() => logout({ returnTo: window.location.origin })}
+                title="Logout"
+              />
+            ) : (
+              <button onClick={() => loginWithRedirect()}>
+                <FaUser />
+              </button>
+            )}
             <Link to="/cart" className="text-gray-600">
               <FaCartPlus />
             </Link>
@@ -231,4 +250,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-            

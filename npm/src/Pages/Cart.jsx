@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromCart, updateQuantity } from "../Redux/CartSlice";
+import { removeFromCart, updateQuantity } from "../Redux/cartSlice";
 
 export default function PaymentMethods() {
   const dispatch = useDispatch();

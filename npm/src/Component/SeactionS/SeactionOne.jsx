@@ -7,25 +7,25 @@ const SectionOne = () => {
       image: 'https://au.koala.com/cdn/shop/collections/Queen_Plus_Mattress_11_1.webp?v=1727055087&width=3000',
       title: 'Mattresses',
       discount: 'Up to 30% off',
-      link: '/mattres',
+      link: '/mattress',
     },
     {
       image: 'https://au.koala.com/cdn/shop/collections/CushyLuxe_Gumleaf_Queen_8_2.webp?v=1727055315&width=3000',
       title: 'Sofa Beds',
       discount: 'Up to 25% off',
-      link: '/sofa-beds',
+      link: '/mattress',
     },
     {
       image: 'https://au.koala.com/cdn/shop/collections/Kirribilli_Bed_Base_Queen_10_1.webp?v=1727055189&width=3000',
       title: 'Bed Bases',
       discount: 'Up to 25% off',
-      link: '/bed-bases',
+      link: '/mattress',
     },
     {
       image: 'https://au.koala.com/cdn/shop/collections/ModernSofa_ArvoStorm_3Seater_4_1.webp?v=1731980629&width=1500',
       title: 'Sofas',
       discount: 'Up to 25% off',
-      link: '/sofas',
+      link: '/mattress',
     },
   ];
 

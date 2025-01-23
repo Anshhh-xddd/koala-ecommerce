@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 const products = [
-  { id: 1, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-  { id: 2, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-  { id: 3, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-  { id: 4, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-  { id: 5, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-  { id: 6, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-  { id: 7, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-  { id: 8, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-  { id: 9, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-  { id: 10, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
+  { id: 1, title: "Koala Mattress ", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/AU_-_The_New_Koala_Mattress_-_Double_-_1_14cc7b35-b07f-4cd8-b9e8-6263a0327b84.webp?v=1728130488&width=720" },
+  { id: 2, title: "Cushy Sofa Bed", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/CushySofaBed_Gumleaf_Double_1-7MEyi5y1DgB0ROwzeyNpsD.jpg?v=1725435226&width=720" },
+  { id: 3, title: "Koala Plus Mattress", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/PlusMattress_4_1_ca134414-61db-43f8-8835-51271efe47df.jpg?v=1728227443&width=720" },
+  { id: 4, title: "Byron Sofa Bed", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/Beauty_Morning_Grey_1-2QERYoBZ956T9xvKzc8RKJ.jpg?v=1725432358&width=720" },
+  { id: 5, title: "Koala Luxe Mattress", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/Queen_Luxe_Mattress_1_3.webp?v=1728130989&width=720" },
+  { id: 6, title: "Modern Sofa", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/Mask_group_1_-2zDIMEZoAbIriKsFUw4Rzm.jpg?v=1725432185&width=720" },
+  { id: 7, title: "Koala SE MAttress", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/SEMattress_12_1_869df618-64d5-4f28-b432-ae4aa71c1bd5.jpg?v=1728227524&width=720" },
+  { id: 8, title: "Kirribilli Beds Base", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/KirribilliBedBase_Queen_10-37gChphwEiQGq4S0NDNu72.jpg?v=1725433209&width=720" },
+  { id: 9, title: "Bangalow modular Sofas", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/Greenwattle_3seater_1-3OKzAwBFg0ThpVaEjbLgm8.jpg?v=1725431902&width=720" },
+  { id: 10, title: "BAlmain Bed Base", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/Balmain_Bed_Base_Queen_1-3pnFdJejnlAUx9qzGkbkbI.jpg?v=1725430275&width=1660" },
 ];
 
 const SeactionTwo = () => {

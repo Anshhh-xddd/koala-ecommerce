@@ -1,4 +1,6 @@
 import React from "react";
+import About from "../Component/About/About";
+import Aboutpage from "./Aboutpage";
 
 export default function Mattrespage() {
   const products = [
@@ -8,7 +10,7 @@ export default function Mattrespage() {
       price: "Queen from $1,050",
       rating: 4.8,
       features: "Plush comfort layers",
-      image: "https://via.placeholder.com/300x200",
+      image: "https://au.koala.com/cdn/shop/files/Queen_Luxe_Mattress_1_3.webp?v=1728130989&width=720",
       tags: ["Best Seller"],
     },
     {
@@ -17,7 +19,7 @@ export default function Mattrespage() {
       price: "Queen from $1,350",
       rating: 4.9,
       features: "Adjustable firmness with cool comfort",
-      image: "https://via.placeholder.com/300x200",
+      image: "https://au.koala.com/cdn/shop/files/PlusMattress_4_1.jpg?v=1728227347&width=720",
       tags: ["Award-winning"],
     },
     {
@@ -26,7 +28,7 @@ export default function Mattrespage() {
       price: "Queen from $999",
       rating: 4.7,
       features: "Firm with plush comfort options",
-      image: "https://via.placeholder.com/300x200",
+      image: "https://au.koala.com/cdn/shop/files/AU_-_The_New_Koala_Mattress_-_Queen_-_1_2.webp?v=1728135769&width=720",
       tags: ["Top Pick"],
     },
     {
@@ -35,7 +37,7 @@ export default function Mattrespage() {
       price: "Queen from $850",
       rating: 4.6,
       features: "Medium-firm layers for support",
-      image: "https://via.placeholder.com/300x200",
+      image: "https://au.koala.com/cdn/shop/files/SEMattress_12_1_869df618-64d5-4f28-b432-ae4aa71c1bd5.jpg?v=1728227524&width=720",
       tags: ["Affordable"],
     },
   ];
@@ -46,21 +48,21 @@ export default function Mattrespage() {
       user: "John D.",
       review: "Life changing mattress, the best sleep I've ever had!",
       stars: 5,
-      image: "https://via.placeholder.com/150x100",
+      image: "https://au.koala.com/cdn/shop/files/3257a0ff-491a-49dc-b026-034c3c390ac5.webp?v=1728632062&width=782",
     },
     {
       id: 2,
       user: "Sarah L.",
       review: "Such a comfy mattress, perfect for my family.",
       stars: 5,
-      image: "https://via.placeholder.com/150x100",
+      image: "https://au.koala.com/cdn/shop/files/0fe80c78-cdad-48d9-b395-4ad76d29c93d.webp?v=1728629161&width=782",
     },
     {
       id: 3,
       user: "Chris P.",
       review: "We should've upgraded years ago! Highly recommend.",
       stars: 5,
-      image: "https://via.placeholder.com/150x100",
+      image: "https://au.koala.com/cdn/shop/files/4bd2100f-feba-4f32-9bc4-bc1d65266816.webp?v=1728628443&width=782",
     },
   ];
 
@@ -153,7 +155,7 @@ export default function Mattrespage() {
               <img
                 src={testimonial.image}
                 alt={testimonial.user}
-                className="w-full h-32 object-cover rounded-md mb-4"
+                className="w-full h-42 object-cover rounded-md mb-4"
               />
               <p className="text-yellow-500 mb-2">
                 {"⭐".repeat(testimonial.stars)}
@@ -166,7 +168,7 @@ export default function Mattrespage() {
           ))}
         </div>
       </section>
-
+     <Aboutpage />
       {/* Media Mentions
       <section className="my-10 text-center">
         <h3 className="text-lg font-semibold mb-4">As seen in</h3>

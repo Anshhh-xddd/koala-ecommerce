@@ -23,7 +23,7 @@ function Carousel() {
   }, []);
 
   return (
-    <div className="carousel relative h-[500px] md:h-[700px] lg:h-[800px] z-0 overflow-hidden bg-[#de8e5f]">
+    <div className="carousel relative h-[500px] md:h-[700px] lg:h-[900px] z-0 overflow-hidden bg-[#de8e5f]">
       <div className="relative h-full flex items-center">
         {slides.map((slide, index) => (
           <div

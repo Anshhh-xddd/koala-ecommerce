@@ -3,16 +3,16 @@ import { Link } from 'react-router-dom';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 
 const products = [
-  { id: 1, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-  { id: 2, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-  { id: 3, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-  { id: 4, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-  { id: 5, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-  { id: 6, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-  { id: 7, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-  { id: 8, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-  { id: 9, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-  { id: 10, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
+  { id: 1, title: "Koala Luxe Mattress", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/Queen_Luxe_Mattress_1_3.webp?v=1728130989&width=720" },
+  { id: 2, title: "Koala Plus Mattress", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/PlusMattress_4_1.jpg?v=1728227347&width=720" },
+  { id: 3, title: "Koala Mattress", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/AU_-_The_New_Koala_Mattress_-_Queen_-_1_2.webp?v=1728135769&width=720" },
+  { id: 4, title: "Koala SE Mattress", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/SEMattress_12_1_869df618-64d5-4f28-b432-ae4aa71c1bd5.jpg?v=1728227524&width=720" },
+  // { id: 5, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
+  // { id: 6, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
+  // { id: 7, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
+  // { id: 8, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
+  // { id: 9, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
+  // { id: 10, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
 ];
 
 const SeactionTwo = () => {
@@ -40,7 +40,7 @@ const SeactionTwo = () => {
     <div className="relative w-full bg-gray-200 py-8 mt-4">
       {/* Section Title */}
       <div className="flex items-center justify-between px-6 mb-6">
-        <h2 className="text-left text-4xl font-extrabold font-serif">Top Rated Products</h2>  
+        <h2 className="text-left text-4xl font-extrabold font-serif">Australia's most awarded mattress brand</h2>  
       </div>
 
       {/* Product Carousel */}
@@ -115,7 +115,7 @@ const ProductCard = ({ product, onAddToCart }) => {
 
   return (
     <Link to={`/product/${product.id}`} className="no-underline">
-      <div className="relative w-full h-auto bg-white text-black rounded-xl border shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+      <div className="relative w-full  h-auto bg-white text-black rounded-xl border shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
         <img src={product.imageUrl} alt={product.title} className="w-full h-40 object-cover rounded-t-xl" />
         <div className="p-4">
           <h1 className="text-lg font-semibold">{product.title}</h1>

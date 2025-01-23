@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react'
 import Header from '../Component/Header/Header';
-import Navbar from '../Component/Navbar/Navbar';
+// import Navbar from '../Component/Navbar/Navbar';
 import Carousel from '../Component/Corosoual/Carousel';
 import Underline from '../Component/Corosoual/Underline';
 import SectionOne from '../Component/SeactionS/SeactionOne';
@@ -17,7 +17,7 @@ const Homepage = () => {
   return (
     <>
     <Header />
-    <Navbar />
+    {/* <Navbar /> */}
     <Carousel />
     <Underline />
 

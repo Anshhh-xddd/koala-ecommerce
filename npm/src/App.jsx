@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Homepage from './Pages/Homepage';
+import Navbar from './Component/Navbar/Navbar';
 import Aboutpage from './Pages/Aboutpage';
 import Mattrespage from './Pages/Mattrespage';
 import Sofapage from './Pages/Sofapage';
-import Aboutinn from './Pages/Aboutinn';
 import ShopSale from './Pages/ShopSale';
-import SofaBeds from './Pages/SofaBeds';
+// import SofaBeds from './Pages/SofaBeds';
 import CategoryPage from './Pages/CategoryPage';
 import Clearance from './Pages/Clearance';
 import Login from './Pages/Login';
@@ -23,15 +23,15 @@ const App = () => {
   const categories = [
     {
       title: "Sofas",
-      subcategories: ["Leather Sofas", "Fabric Sofas", "Recliners", "Sectionals", "Sofa Beds", "Loveseats"],
+      subcategories: ["Sofas", "Bed Sofas", "Modual Sofas", "Chaise sofas", "Sofa Beds", "Loveseats"],
     },
     {
       title: "Bedrooms",
-      subcategories: ["Beds", "Wardrobes", "Dressers", "Nightstands", "Headboards", "Chests"],
+      subcategories: ["Mattresses", "Bed Bases", "Bundles", "Pillow", "Headboards", "Chests"],
     },
     {
       title: "Living Room",
-      subcategories: ["Coffee Tables", "TV Stands", "Accent Chairs", "Console Tables", "Bookcases", "Ottomans"],
+      subcategories: ["Sofas Beds", "Sofas", "Armchairs", "Rugs", "Bookcases", "Ottomans"],
     },
     {
       title: "Outdoor",
@@ -40,44 +40,49 @@ const App = () => {
   ];
 
   return (
-    <Routes>
-      {/* Static Routes */}
-      <Route path="/" element={<Homepage />} />
-      <Route path="/About" element={<Aboutpage />} />
-      <Route path="/sofa" element={<Sofapage />} />
-      <Route path="/mattress" element={<Mattrespage />} />
-      <Route path="/shop-sale" element={<ShopSale />} />
-      <Route path="/clearance" element={<Clearance />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/product/:id" element={<ProductDetail />} />
+    <div className="app">
+      {/* Navbar renders consistently across all routes */}
+      <Navbar />
 
-      {/* Conditional Route for Profile */}
-      <Route
-        path="/profile"
-        element={
-          isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />
-        }
-      />
+      <Routes>
+        {/* Static Routes */}
+        <Route path="/" element={<Homepage />} />
+        <Route path="/about" element={<Aboutpage />} />
+        <Route path="/sofa" element={<Sofapage />} />
+        <Route path="/mattress" element={<Mattrespage />} />
+        <Route path="/shop-sale" element={<ShopSale />} />
+        <Route path="/clearance" element={<Clearance />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/product/:id" element={<ProductDetail />} />
 
-      {/* Dynamic Routes for Categories */}
-      {categories.map((category) =>
-        category.subcategories.map((subcategory) => {
-          const categoryPath = category.title.toLowerCase().replace(/\s+/g, "-");
-          const subcategoryPath = subcategory.toLowerCase().replace(/\s+/g, "-");
+        {/* Conditional Route for Profile */}
+        <Route
+          path="/profile"
+          element={
+            isLoggedIn ? <Profile /> : <Login setIsLoggedIn={setIsLoggedIn} />
+          }
+        />
 
-          return (
-            <Route
-              key={`${category.title}-${subcategory}`}
-              path={`/${categoryPath}/${subcategoryPath}`}
-              element={<CategoryPage category={category.title} subcategory={subcategory} />}
-            />
-          );
-        })
-      )}
+        {/* Dynamic Routes for Categories */}
+        {categories.map((category) =>
+          category.subcategories.map((subcategory) => {
+            const categoryPath = category.title.toLowerCase().replace(/\s+/g, "-");
+            const subcategoryPath = subcategory.toLowerCase().replace(/\s+/g, "-");
 
-      {/* Fallback Route */}
-      <Route path="*" element={<NotFoundPage />} />
-    </Routes>
+            return (
+              <Route
+                key={`${category.title}-${subcategory}`}
+                path={`/${categoryPath}/${subcategoryPath}`}
+                element={<CategoryPage category={category.title} subcategory={subcategory} />}
+              />
+            );
+          })
+        )}
+
+        {/* Fallback Route */}
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </div>
   );
 };
 

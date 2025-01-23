@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
+    "@reduxjs/toolkit": "^2.5.0",
     "mdb-react-ui-kit": "^9.0.0",
     "navigate": "^0.3.6",
     "react": "^18.3.1",

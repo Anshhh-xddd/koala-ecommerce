@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 
 const products = [
-    { id: 1, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-    { id: 2, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-    { id: 3, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-    { id: 4, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-    { id: 5, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-    { id: 6, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-    { id: 7, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
-    { id: 8, title: "Dell XPS 13", price: 1200.99, rating: 4.7, imageUrl: "/assets/images/product2.png" },
-    { id: 9, title: "Apple MacBook Pro", price: 2500.99, rating: 4.8, imageUrl: "/assets/images/product3.png" },
-    { id: 10, title: "HP Spectre x360 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
+    { id: 1, title: "Bangalow Modualar Sofas", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/Greenwattle_3seater_1-3OKzAwBFg0ThpVaEjbLgm8.jpg?v=1725431902&width=1660" },
+    { id: 2, title: "Suffolk Sofa", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/Suffolk_Sofa_3.5_Chaise_CoastalMoss_1-5NbXRQHdtyMQ78xJESySeL.jpg?v=1725431093&width=720" },
+    { id: 3, title: "Wanda Sofa Bed", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/Wanda_SunsetBlush_1.webp?v=1727356006&width=720" },
+    { id: 4, title: "Torakina Outdoor Lounge Sets", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/Outdoor_Torakina_LoungeSet1__SoftMoss_1-4tKgT4EMdq7sAwV70XAvAs.jpg?v=1725430405&width=720" },
+    { id: 5, title: "Torakina Outdoor Dining Sets", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/Outdoor_Torakina_DiningSet1_Rose_1-4ijAzOTZhaW1GSVFGezdjh.png?v=1725430469&width=720" },
+    { id: 6, title: "Balmain Bedside Table", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/Balmain_BedsideTable_1-44eSARIUEZaEoFfqYcojHt.jpg?v=1725430238&width=720" },
+    { id: 7, title: "Balmain Chest of Drawers", price: 650.99, rating: 4.5, imageUrl: "https://au.koala.com/cdn/shop/files/Balmain_ChestOfDrawers_5Drawers_1-5ZCCWv5u2bDClKCj4MGv7L.jpg?v=1725430290&width=720" },
+    { id: 8, title: "Suffolk armchair", price: 1200.99, rating: 4.7, imageUrl: "https://au.koala.com/cdn/shop/files/Suffolk_Armchair_Sandstone_1-68vH5molvpx1jiDpWODR1E.jpg?v=1725431123&width=720" },
+    { id: 9, title: "Suffolk Ottoman", price: 2500.99, rating: 4.8, imageUrl: "https://au.koala.com/cdn/shop/files/Suffolk_Ottoman_CoastalMoss_1-7e7LYoltx6uVUs7yA0jZWH.jpg?v=1725430846&width=720x`x`" },
+    // { id: 10, title: "HP Spectre x36`0 15", price: 650.99, rating: 4.5, imageUrl: "/assets/images/product1.png" },
 ];
 
 const ProductCard = ({ product }) => (

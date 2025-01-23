@@ -93,7 +93,7 @@ const ProductDetail = () => {
                             <img
                                 key={num}
                                 src={`https://via.placeholder.com/80?text=Thumb+${num}`}
-                                alt={`Thumbnil ${num}`}
+                                alt={`Thumbnail ${num}`}
                                 className="w-full rounded-md shadow-sm hover:opacity-80"
                             />
                         ))}
